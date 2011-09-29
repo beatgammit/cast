@@ -3,7 +3,7 @@
   "name": "cast",
   "description": "Attempts to solve the problem of unintuitive data types",
   "keywords": ["cast", "data-types", "data types", "types"],
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:beatgammit/cast.git"

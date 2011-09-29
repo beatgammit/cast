@@ -131,6 +131,14 @@
             {
                 args: ['10e6', 'number'],
                 expected: null
+            },
+            {
+                args: ['10.1', 'number'],
+                expected: 10.1
+            },
+            {
+                args: ['10.1', 'number', 10],
+                expected: null
             }
         ];
 
@@ -141,8 +149,6 @@
         console.log('Test case:', i);
         console.log('Args:', testCase.args);
         console.log('Expected:', testCase.expected);
-        console.log();
-        console.log();
 
         res = cast.apply(this, testCase.args);
 
@@ -163,9 +169,14 @@
                 }
             } else {
                 console.error('Case failed:', i);
+                console.error('Expected:', testCase.expected);
+                console.error('Actual:', res);
                 fail = true;
             }
         }
+
+        console.log();
+        console.log();
     });
 
     if (fail) {
