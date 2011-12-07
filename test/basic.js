@@ -91,53 +91,53 @@
                 args: ['cheese', 'float'],
                 expected: null
             },
-            // number tests
+            // integer tests
             {
-                args: [0, 'number'],
+                args: [0, 'integer'],
                 expected: 0
             },
             {
-                args: ['0', 'number'],
+                args: ['0', 'integer'],
                 expected: 0
             },
             {
-                args: ['00', 'number'],
+                args: ['00', 'integer'],
                 expected: 0
             },
             {
-                args: ['10', 'number'],
+                args: ['10', 'integer'],
                 expected: 10
             },
             {
-                args: ['10', 'number', 2],
+                args: ['10', 'integer', 2],
                 expected: 2
             },
             {
-                args: ['10', 'number', 16],
+                args: ['10', 'integer', 16],
                 expected: 16
             },
             {
-                args: ['10', 'number', 10],
+                args: ['10', 'integer', 10],
                 expected: 10
             },
             {
-                args: ['10', 'number', 'cheese'],
+                args: ['10', 'integer', 'cheese'],
                 expected: 10
             },
             {
-                args: ['cheese', 'number'],
+                args: ['cheese', 'integer'],
                 expected: null
             },
             {
-                args: ['10e6', 'number'],
+                args: ['10e6', 'integer'],
                 expected: null
             },
             {
-                args: ['10.1', 'number'],
-                expected: 10.1
+                args: ['10.1', 'integer'],
+                expected: null
             },
             {
-                args: ['10.1', 'number', 10],
+                args: ['10.1', 'integer', 10],
                 expected: null
             }
         ];

@@ -41,13 +41,11 @@ Usage
 
 *function cast(val, type[, radix])*
 
-* val- the value to cast (strings are the most useful, but numbers and arrays can also make sense)
+* val- the value to cast (strings are the most useful, but integers and arrays can also make sense)
 * type- string or function (anything else will throw an exception)
     * if a function, an `instanceof` will be done internally
-    * if a string, acceptable values are: 'array', 'boolean', 'float', 'number'
-* radix- only applies for numbers
-
-In this function, 'number' will use `parseInt` if the radix is set, or parseFloat if not.
+    * if a string, acceptable values are: 'array', 'boolean', 'float', 'integer'
+* radix- only applies for integers
 
 There are only two possible return values, `null` or something of the type specified by type. Since null cannot be assigned to (as undefined can), this makes complete sense. The first parameter is never modified, so this function truly does no evil.
 
@@ -66,13 +64,13 @@ Examples
 > cast(true, 'boolean'); // returns true
 > cast(false, 'boolean'); // returns false
 
-**Numbers**
+**Integers**
 
-> cast('10', 'number'); // returns 10
-> cast('10c', 'number'); // returns null
-> cast('10e10', 'number'); // returns null
-> cast(10, 'number'); // returns 10
-> cast('10', 'number', 8); // returns 8
-> cast('10', 'number', '8'); // returns 8
-> cast('10.1', 'number', 10); // returns 10
-> cast('10.1', 'number'); // returns 10.1
+> cast('10', 'integer'); // returns 10
+> cast('10c', 'integer'); // returns null
+> cast('10e10', 'integer'); // returns null
+> cast(10, 'integer'); // returns 10
+> cast('10', 'integer', 8); // returns 8
+> cast('10', 'integer', '8'); // returns 8
+> cast('10.1', 'integer', 10); // returns 10
+> cast('10.1', 'integer'); // returns null
