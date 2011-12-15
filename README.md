@@ -44,7 +44,7 @@ Usage
 * val- the value to cast (strings are the most useful, but integers and arrays can also make sense)
 * type- string or function (anything else will throw an exception)
     * if a function, an `instanceof` will be done internally
-    * if a string, acceptable values are: 'array', 'boolean', 'float', 'integer'
+    * if a string, acceptable values are: 'array', 'boolean', 'float', 'integer', 'number' (alias for 'float')
 * radix- only applies for integers
 
 There are only two possible return values, `null` or something of the type specified by type. Since null cannot be assigned to (as undefined can), this makes complete sense. The first parameter is never modified, so this function truly does no evil.
@@ -72,5 +72,9 @@ Examples
 > cast(10, 'integer'); // returns 10
 > cast('10', 'integer', 8); // returns 8
 > cast('10', 'integer', '8'); // returns 8
-> cast('10.1', 'integer', 10); // returns 10
+> cast('10.1', 'integer', 10); // returns null
 > cast('10.1', 'integer'); // returns null
+
+**Floats**
+
+> cast('5.25', 'float'); // returns 5.25

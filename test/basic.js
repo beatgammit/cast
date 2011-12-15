@@ -84,6 +84,14 @@
                 expected: 1.1
             },
             {
+                args: [-1.1, 'float'],
+                expected: -1.1
+            },
+            {
+                args: ['-1.1', 'float'],
+                expected: -1.1
+            },
+            {
                 args: ['1.1e6', 'float'],
                 expected: null
             },
@@ -91,10 +99,22 @@
                 args: ['cheese', 'float'],
                 expected: null
             },
+            {
+                args: [false, 'float'],
+                expected: null
+            },
+            {
+                args: [true, 'float'],
+                expected: null
+            },
             // integer tests
             {
                 args: [0, 'integer'],
                 expected: 0
+            },
+            {
+                args: [-10, 'integer'],
+                expected: -10
             },
             {
                 args: ['0', 'integer'],
@@ -125,6 +145,10 @@
                 expected: 10
             },
             {
+                args: ['-10', 'integer', 'cheese'],
+                expected: -10
+            },
+            {
                 args: ['cheese', 'integer'],
                 expected: null
             },
@@ -138,6 +162,14 @@
             },
             {
                 args: ['10.1', 'integer', 10],
+                expected: null
+            },
+            {
+                args: [false, 'integer'],
+                expected: null
+            },
+            {
+                args: [true, 'integer'],
                 expected: null
             }
         ];
