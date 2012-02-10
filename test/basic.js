@@ -171,6 +171,31 @@
             {
                 args: [true, 'integer'],
                 expected: null
+            },
+            // string tests
+            {
+                args: [true, 'string'],
+                expected: 'true'
+            },
+            {
+                args: [false, 'string'],
+                expected: 'false'
+            },
+            {
+                args: [5, 'string'],
+                expected: '5'
+            },
+            {
+                args: [[], 'string'],
+                expected: null
+            },
+            {
+                args: [{}, 'string'],
+                expected: null
+            },
+            {
+                args: ['hello', 'string'],
+                expected: 'hello'
             }
         ];
 

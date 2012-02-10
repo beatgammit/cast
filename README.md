@@ -78,3 +78,13 @@ Examples
 **Floats**
 
 > cast('5.25', 'float'); // returns 5.25
+
+**Strings**
+
+> cast(5, 'string'); // returns '5'
+> cast(true, 'string'; // returns 'true'
+> cast('hello', 'string'); // returns 'hello'
+> cast({}, 'string'); // returns null
+> cast(undefined, 'string'); // returns null
+> cast(null, 'string'); // returns null
+> cast([], 'string'); // returns null
