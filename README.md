@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/beatgammit/cast.png)](http://travis-ci.org/beatgammit/cast)
 TL;DR
 =====
 
